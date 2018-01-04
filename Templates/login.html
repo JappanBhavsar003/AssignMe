@@ -1,0 +1,91 @@
+﻿<style>
+    body {
+        background: linear-gradient(to right, #ff607b, #cb62e5);
+        /*background: linear-gradient(to right, #169314,#6e2aed)*/
+        background-position: center; 
+        background-attachment: fixed;
+    }
+
+    .card {
+        background-color: #fff;
+        width: 35%;
+        margin: auto;
+        -moz-box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        -webkit-box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        border-radius: 1px;
+        height: auto;
+    }
+
+    .title {
+        background: -webkit-linear-gradient(#ff607b, #cb62e5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .pad10 {
+        padding: 10px;
+    }
+
+    .form-group {
+        border-radius: 0px;
+        width: 100%;
+        
+    }
+
+    .form-control {
+        border-radius: 0px;
+    }
+
+    @media only screen and (max-width: 650px) {
+        .card {
+            width: 80%;
+            height: 70%;
+        }
+    }
+
+     #login {
+        cursor: pointer;
+        display: inline; text-align: center;
+    }
+
+    #login:hover {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+</style>
+<div style="text-align: center;">
+    <table border="0" style="height: 100vh; width: 100%;">
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                <div class="card pad10">
+                    <div class="h20"></div>
+                    <h4 class="title">Assign Me</h4>
+                    <div class="h20"></div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="Email" ng-model="login.email" placeholder="abc@xyz.com" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="password" ng-model="login.password" placeholder="*******" class="form-control">
+                        </div>
+                    </div>
+                    <div class="h20"></div>
+                    <div class="btn btn-default title" id="login" ng-click="auth();">
+                        Login
+                    </div>
+                    <hr style="width: 50%;"/>
+                    <p>Don't have account yet?</p>
+                    <div class="btn btn-default title" id="login">
+                        Signup
+                    </div>
+                    <div class="h20"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</div>
